@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <style>
         body{
             background-image: url("images.jpg");
@@ -142,7 +144,7 @@
 
                 // delete
                 let delete1 = document.createElement("p")
-                delete1.innerHTML = "Delete"
+                delete1.innerHTML = '<span class="material-symbols-outlined">delete</span>'
                 delete1.classList.add("remove")
                 delete1.style.fontFamily = "Broadway"
                 delete1.addEventListener("click", () => deleteScore(index))
@@ -222,6 +224,11 @@
                 // Add
                 addData(fname,lname,score,country)
 
+                
+                document.getElementById("fname").value = ""
+                document.getElementById("lname").value = ""
+                document.getElementById("country").value = ""
+                document.getElementById("score").value = ""
             })
         } )
     </script>
